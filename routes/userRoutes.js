@@ -11,7 +11,7 @@ router.get("/:id", (req, res) => {
   res.send("This is GET One User...");
 });
 
-router.post("/:id", (req, res) => {
+router.post("/", (req, res) => {
   res.send("This is ADD User...");
 });
 
