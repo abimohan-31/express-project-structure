@@ -12,7 +12,7 @@ app.get("/", (req, res) => {
   res.send("Hello Express, this is test!");
 });
 
-app.use("/api", userRoutes);
+app.use(userRoutes);
 
 app.listen(PORT, () => {
   console.log(`Server running at http://localhost:${PORT}`);
