@@ -10,20 +10,25 @@ app.get("/", (req, res) => {
   res.send("Hello Express, this is test!");
 });
 
-// app
-//   .route("/book")
-//   .get((req, res) => {
-//     res.send("Get a random book");
-//   })
-//   .post((req, res) => {
-//     res.send("Add a book");
-//   })
-//   .put((req, res) => {
-//     res.send("Update the book");
-//   });
-
+// user routes
 router.get("/users", (req, res) => {
   res.send("This is GET user...");
+});
+
+router.get("/users:id", (req, res) => {
+  res.send("This is GET One User...");
+});
+
+router.post("/users:id", (req, res) => {
+  res.send("This is ADD User...");
+});
+
+router.put("/users:id", (req, res) => {
+  res.send("This is UPDATE User...");
+});
+
+router.delete("/users:id", (req, res) => {
+  res.send("This is DELETE User...");
 });
 
 app.use(router);
